@@ -6,9 +6,6 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import firebase from 'firebase/compat';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from './home/firebase-config';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -20,10 +17,4 @@ import { firebaseConfig } from './home/firebase-config';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-  constructor() {
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    console.log('it works');
-  }
-}
+export class AppModule {}
